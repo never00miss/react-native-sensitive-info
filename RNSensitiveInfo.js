@@ -1,8 +1,8 @@
-import {NativeModules} from 'react-native';
+import { NativeModules } from "react-native";
 
 const RNSensitiveInfo = NativeModules.RNSensitiveInfo;
 
-module.exports = {
+export default {
   ...RNSensitiveInfo,
   setInvalidatedByBiometricEnrollment() {
     if (RNSensitiveInfo.setInvalidatedByBiometricEnrollment == null) {
@@ -17,5 +17,5 @@ module.exports = {
     }
 
     return RNSensitiveInfo.cancelFingerprintAuth();
-  },
+  }
 };
